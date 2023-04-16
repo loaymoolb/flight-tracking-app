@@ -20,7 +20,7 @@ interface IMapboxViewProps {
 
 type Props = IMapboxViewProps;
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoib2x5YW1haWkiLCJhIjoiY2xnNmx2aDBqMGJkODNsczE5Z3BuanV4NyJ9.tb7RlW2t8lGVZc-Lc_h-OQ';
+mapboxgl.accessToken = 'pk.eyJ1Ijoib2x5YW1haWkiLCJhIjoiY2xnNmx2aDBqMGJkODNsczE5Z3BuanV4NyJ9.tb7RlW2t8lGVZc-Lc_h-O';
 
 const MapView = (props: Props) => {
   const [mapInstance, setMapInstance] = useState<mapboxgl.Map>();
