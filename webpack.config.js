@@ -10,18 +10,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx)$/,
+        loader: 'babel-loader',
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-              '@babel/preset-typescript',
-            ],
-          },
+        options: {
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react',
+            '@babel/preset-typescript'
+          ],
+          ignore: ['./node_modules/mapbox-gl/dist/mapbox-gl.js']
         },
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
